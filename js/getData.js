@@ -47,5 +47,20 @@ export default {
             });
             callback(result)
         })
+    },
+    catalog(callback){
+        this.get((data) => {
+            const resultOld = data.map(item => item.category);
+            const resultNew = new Set(resultOld);
+
+            callback(Array.from(resultNew));
+        })
+    },
+    subCatalog(value, callback){
+        this.get((data) => {
+            const result = data.filter(item => item.category === value);
+
+            callback(result)
+        })
     }
 }

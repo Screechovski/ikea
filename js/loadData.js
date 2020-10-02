@@ -32,4 +32,7 @@ export default () => {
     if (location.pathname.includes('cart')) {
         getData.cart(cardList, data => console.log(data))
     }
+
+    getData.catalog(data => console.log(data))
+    getData.subCatalog("Декор", data => console.log(data))
 };
