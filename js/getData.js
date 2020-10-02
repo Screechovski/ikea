@@ -51,7 +51,7 @@ export default {
     catalog(callback){
         this.get((data) => {
             const resultOld = data.map(item => item.category);
-            const resultNew = new Set(resultOld);
+            const resultNew = new Set(resultOld);  // тип данных который из массива с повторяющимися данными создает обьект с уникальных данных, можно было бы и проще, но почему бы не юзать es6? ))
 
             callback(Array.from(resultNew));
         })
