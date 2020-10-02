@@ -1,6 +1,4 @@
-'use strict';
-
-const generateCatalog = () => {
+export default () => {
     const catalog = `
         <div class="catalog">
             <button type="button" class="btn btn-close catalog-btn" id="hnf-menu-close-btn" aria-expanded="true"
@@ -25,5 +23,3 @@ const generateCatalog = () => {
 
     document.body.insertAdjacentHTML('beforebegin', catalog)
 };
-
-generateCatalog();
